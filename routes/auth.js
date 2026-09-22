@@ -6,6 +6,12 @@ const path = require('path');
 const router = express.Router();
 const USERS_FILE = path.join(__dirname, '../data/users.json');
 
+// Make sure the data folder exists — it won't on a fresh deploy,
+// since data/users.json is gitignored and Git doesn't track empty folders.
+if (!fs.existsSync(path.dirname(USERS_FILE))) {
+  fs.mkdirSync(path.dirname(USERS_FILE), { recursive: true });
+}
+
 function readUsers() {
   if (!fs.existsSync(USERS_FILE)) return [];
   const raw = fs.readFileSync(USERS_FILE, 'utf-8');
