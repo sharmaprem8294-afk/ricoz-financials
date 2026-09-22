@@ -19,7 +19,7 @@ app.set('trust proxy', 1);
 // Session-based auth. In production, set a SESSION_SECRET environment
 // variable on your host instead of relying on the fallback below.
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'dev-only-secret-change-me',
+    secret: process.env.SESSION_SECRET || 'local-dev-only-secret',
   resave: false,
   saveUninitialized: false,
   cookie: {
