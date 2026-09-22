@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RicozFinancials — Create account</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="auth-shell">
+    <div class="auth-brand-panel">
+      <div>
+        <p class="eyebrow">Finance &amp; Accounting</p>
+        <h1>RicozFinancials</h1>
+        <p class="tagline">Consolidated accounts, board reporting, and KPI tracking for multi-entity organisations.</p>
+        <ul class="feature-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg> Management accounts &amp; MI production</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg> Consolidated financial reporting</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg> Board and executive reporting</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg> Financial KPI tracking &amp; dashboards</li>
+        </ul>
+      </div>
+      <p class="brand-foot">&copy; 2026 RicozFinancials</p>
+    </div>
+
+    <div class="auth-form-panel">
+      <div class="auth-wrap">
+        <h2>Create account</h2>
+        <p class="form-sub">Set up access to RicozFinancials.</p>
+
+        <form id="registerForm" class="auth-form">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" required autocomplete="new-password" minlength="6">
+          </div>
+          <div class="field">
+            <label for="confirmPassword">Confirm password</label>
+            <input type="password" id="confirmPassword" required autocomplete="new-password" minlength="6">
+          </div>
+          <p id="errorMsg" class="error-msg" hidden></p>
+          <button type="submit">Create account</button>
+        </form>
+
+        <p class="switch-line">Already have an account? <a href="/">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/register.js"></script>
+</body>
+</html>
